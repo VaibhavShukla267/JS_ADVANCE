@@ -1,0 +1,63 @@
+<!-- Setting text content
+This example uses a <div> element containing a <textarea> and two <button> elements. When the user clicks the first button we set some text in the <textarea>. When the user clicks the second button we clear the text.  -->
+
+<html>
+<head>
+    <title>
+        Dom Selector example
+    </title>
+</head>
+    <div class="container">
+        <textarea class="story"></textarea>
+        <button id="set-text" type="button">Set text content</button>
+        <button id="clear-text" type="button">Clear text content</button>
+    </div>
+
+
+    <style>
+
+        .container {
+            display: flex;
+            gap: 0.5rem;
+            flex-direction: column;
+        }
+        
+        button {
+            width: 200px;
+        }
+    </style>
+
+
+
+    <script>
+
+        const story=document.body.querySelector(`.story`);
+        const setText=document.body.querySelector(`#set-text`)
+        
+        setText.addEventListener("click",()=>{
+            story.textContent="Hey Welcome To playground Great to have you here!!!"
+        })
+        
+        const clearText=document.body.querySelector( `#clear-text`)
+        clearText.addEventListener("click",()=>{
+            story.textContent=""
+        })
+    </script>
+    
+    
+</html>
+
+
+
+<!-- Note
+Document.querySelector() to access the <textarea> and the button
+
+
+EventTarget.addEventListener() to listen for button clicks
+
+
+Node.textContent to set and clear the text. -->
+
+
+
+

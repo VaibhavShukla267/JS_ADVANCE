@@ -1,0 +1,96 @@
+<!-- changing background color by clicking on the buttons -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing colors</title>
+</head>
+<body>
+    <nav>
+        <div class="header">
+         <a href="/"aria-current="page">HOME</a>
+         <a target="_blank" href="amazon.com">AMAZON</a>
+    </nav>
+
+
+    <h2>COLOR SCHEME SWITCHER</h2>
+    <div class="parent">
+    <div class="button" id="grey"></div>
+    <div class="button" id="white"></div>
+    <div class="button" id="blue"></div>
+    <div class="button" id="yellow"></div>
+    </div>
+    <h2>TRY CLICKING ON ONE OF THE ABOVE COLORS ABOVE </h2>
+    <span>TO CHANGE THE BACKGROUND COLOR OF THIS PAGE</span>
+
+    <style>
+        .header{
+            height: 5vh;
+            width: auto;
+            background-color: rgb(109, 109, 87);
+            display: flex;
+            justify-content: center;
+            flex-direction:row-reverse;
+            list-style: none;
+            padding: 20px ;
+            margin:20px;
+            border: 1px solid rgb(182, 145, 145);
+            width: auto;
+            text-decoration: none;
+            color: aquamarine;
+         
+        }
+        a{
+            padding: 10px;
+            text-align: center;     
+            height: 15px;
+            width: 30%;
+            border: 2px solid rgb(164, 114, 73);
+            text-decoration: none;
+            color: bisque;
+            margin: 8px;
+        }
+        .parent{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+        }
+
+        .button{
+            height: 15vh;
+            width: 15vh;
+            margin: 10px;
+            
+        }
+        #grey{
+            background-color: grey;
+            border: 2px solid black;
+        }
+        
+        #white{
+            background-color: white;
+            border: 2px solid black;
+        }
+        
+        #blue{
+            background-color:blue;
+            border: 2px solid black;
+        }
+        
+        #yellow{
+            background-color:yellow;
+            border: 2px solid black;
+        }
+  
+
+
+    </style>
+
+    <script src="change.js"></script>
+
+    
+</body>
+</html>

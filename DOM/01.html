@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>DOM Learning</title>
+    <style>
+        .bg-black{
+            background-color:rgb(43, 28, 28);
+            color:aliceblue
+            
+
+        }
+    </style>
+</head>
+<body>
+
+   
+    <div class="bg-black">
+    <h1 id="title" class="Heading">Dom Learning<span style="display:none;">text test</span><h1>
+    </div>
+    <script>
+        <!-- its window . document -->
+        alert(`HelloJavascript`) 
+        let p=prompt(`what's your name`)
+        document.write(p)
+        console.log(window);
+        document.title="abcd";
+</script>
+    <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, magni?</h2>
+    <h2><p>
+
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, magni?</h2>
+    </p>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio ea culpa adipisci earum natus impedit. Illum esse, perferendis quasi minus praesentium accusamus inventore perspiciatis sunt quam, omnis dicta, odio voluptatum!</p>
+    </div>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>ContactUs</li>
+    </ul>
+</body>
+</html>
+
+
+<!-- The DOM is not a programming language, but without it, the JavaScript language wouldn't have any model or notion of web pages, HTML documents, SVG documents, and their component parts. The document as a whole, the head, tables within the document, table headers, text within the table cells, and all other elements in a document are parts of the document object model for that document. They can all be accessed and manipulated using the DOM and a scripting language like JavaScript. -->
+
+<!-- A way to write in html -->
+<body onload="console.log('Welcome to my home page!');">
+    …
+  </body>
+
+<!-- As it is generally not recommended to mix the structure of the page (written in HTML) and manipulation of the DOM (written in JavaScript), the JavaScript parts will be grouped together here, and separated from the HTML. -->
+<!-- For example, the following function creates a new h1 element, adds text to that element, and then adds it to the tree for the document: -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        
+        window.onload=()=>{
+            const Name="Vaibhav"
+            const College="Htbu"
+            
+            const Heading=document.createElement("h1")
+            const TextHeading=document.createTextNode("BigText")
+
+            Heading.appendChild(TextHeading);
+            document.body.appendChild(Heading);
+
+            
+            
+        };
+        
+    </script>
+    </body>
+</html>

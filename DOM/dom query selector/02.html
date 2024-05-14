@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NODE</title>
+</head>
+<body style="background-color: black; color:aliceblue">
+</body>
+<script>
+    const div=document.createElement('div')
+    console.log(div)
+    div.className='main'
+    div.id=Math.round(Math.random()*10+1)
+    div.setAttribute("title","Vaibhav")
+    div.style.backgroundColor="red"
+    div.style.padding="12px"
+   // div.innerText="Welcome to the learning of JavaScript"
+    //or 
+    const addText=document.createTextNode("Welcome to the learning of JavaScript")
+    div.appendChild(addText)
+    document.body.appendChild(div)
+
+
+
+    const div1=document.createElement('div')
+    div1.className="main1"
+    div1.style.backgroundColor="yellow"
+    div1.style.padding="15px"
+    div1.style.margin="7px"
+    //div.innerHTML="Welcome Again To our Course"//
+    const text=document.createTextNode("Welcome Again To our Course")
+    div1.appendChild(text)
+    document.body.appendChild(div1)
+
+</script>
+</html>
