@@ -1,0 +1,37 @@
+
+********Important for interview perpespective*******
+
+Java Script is Synchronus and single threaded.
+
+Synchronus means ek code execute hoga fir ek aur code execute hoga. and soo on.......
+and single threaded means ek hi thread pe sab execute hoga
+since javascript is found in runtime environment so it works perfectly with single threaded
+
+********************************************
+
+Execution Context:Each operations waits for the last one to complete before executing..
+
+Blocking Code Vs Non Blocking Code
+i.e Synchronus and Asynchronus. 
+
+Blocking Code:Block The flow Of whole program & And read the file sync
+
+Non blocking code:Does Not Block Executuion And Read file Async...
+
+Its not like that non blocking code is always correct but if we take example that when a user wants to register in a portal....If code goes to non blocking code it will print registration succesful even registration is not complete.....
+
+But if code goes blocking code it first stops the flow of particular code and interprets the operations needed by user then completes it and give user successful registration message.
+
+************************************************
+
+Understanding Events Loops
+
+In Js Engine,call stack is build  where a global and functions are loaded and when work is done they are unloaded.and memory is also build where we can see how memory is stored in memory.
+
+We have web ApI like for eg:we apply set timeout in fucntion of call stack.after setting it the set timeout will register itself to register call back.
+
+All the register call back are stored in task queues so that after completing a particular call back it adds back to call stack. 
+
+for eg if print 1 then 2 the  3. if we set timeout (0,2) on 2 it will first 1 then 3 then 3 since its passing throuh whole above process .so it takes time not soo  much but a bit...
+
+One to remember is fetch() api it has its own task queue which is a high priority queue that stores promises 

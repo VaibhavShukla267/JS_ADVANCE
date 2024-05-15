@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Asyn Code</h1>
+    <button id="stop">Stop</button>
+    
+</body>
+<script>
+const Hi=function(){
+    console.log("Hi Vaibhav")
+}
+const changeText=function(){
+    document.querySelector('h1').innerHTML="Hi!Vaibhav Shukla"
+}
+
+const time=setTimeout(changeText,4000);
+document.querySelector('#stop');
+addEventListener('click',function(e){
+    clearTimeout(time)
+    console.log("Stop Is clicked")
+    
+})
+
+<!-- setInterval(Hi,4000); -->
+</script>
+
+</html>
