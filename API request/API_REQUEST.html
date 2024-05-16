@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Request</title>
+</head>
+<body style="background-color: rgb(29, 28, 28); color:aliceblue">
+
+    <div class="parent">
+        <div id="card">
+    </div>
+
+    <
+
+    <!-- These all are the state changrs that a ready state does:
+    before have fetch() we have xmlhttprequest that is used to fetch api.
+    Value	State	Description
+0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete. -->
+
+<!-- The readyState property has five states:
+0: Request not initialized
+1: Server connection established
+2: Request has been received
+3: Request is being processed
+4: Response is ready after request is finished 
+The XMLHttpRequest object goes through these states in order:
+0 → 1 → 2 → 3 → … → 3 → 4 
+
+ -->
+
+
+
+
+
+<style>
+
+   
+
+
+    #card{
+        height: 50vh;
+        width: 50vh;
+        border: 2px solid red;
+        padding: 13px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        
+
+    }
+    img{
+        height: 45vh;
+        width:45vh;
+    }
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+</body>
+<script>
+ const APIRequest='https://api.github.com/users/hiteshchoudhary';
+ const xhr=new XMLHttpRequest();
+ xhr.open('GET',APIRequest);
+ xhr.onreadystatechange=function(){
+    console.log(xhr.readyState);
+    if(xhr.readyState===4){
+        const data=JSON.parse(this.responseText)
+        console.log(data)
+        console.log(typeof data)
+        console.log(data.followers)
+        console.log(data.avatar_url)
+
+        let card=document.querySelector('#card')
+        card.innerHTML=data.name
+        console.log(card)
+        let img=document.createElement('img');
+        img.src=data.avatar_url;
+        console.log(img.src)
+        card.appendChild(img)
+        
+    }
+ }
+ xhr.send();
+</script>
+</html>
